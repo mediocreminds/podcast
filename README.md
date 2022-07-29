@@ -41,3 +41,12 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 - First make sure your changes are good to go on `main` branch
 - Then merge changes from `main` to `podcast` (we always use `podcast` branch as prodoction branch, and every change must go from adhoc branch -> main -> podcast)
 - Github Pages action will automatically deploy the new changes
+
+
+# Future Milestones
+
+- Convert Static to Dynamic (React, Nextjs, etc)
+- Make sure audio files are pushed as git lfs
+- Make this as generic as possible with a single or a couple of json configuration files
+- Make this open source + self hosted podcast manager
+- Charge others who want to host from our end
