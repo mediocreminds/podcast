@@ -555,27 +555,27 @@ a {
     visibility: visible;
     z-index: 4; }
 
-.fileconfst-entry {
+.st-entry {
   -webkit-box-shadow: 0 5px 40px -10px rgba(0, 0, 0, 0.1);
   box-shadow: 0 5px 40px -10px rgba(0, 0, 0, 0.1); }
-  .fileconfst-entry .sep {
+  .st-entry .sep {
     margin-left: 5px;
     margin-right: 5px;
     color: #ccc; }
-  .fileconfst-entry .image {
+  .st-entry .image {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     height: 300px; }
     @media (min-width: 768px) {
-      .fileconfst-entry .image {
+      .st-entry .image {
         width: 300px;
         height: auto; } }
-  .fileconfst-entry .text {
+  .st-entry .text {
     width: 100%;
     padding: 40px; }
     @media (min-width: 768px) {
-      .fileconfst-entry .text {
+      .st-entry .text {
         width: calc(100% - 300px); } }
 
 .mejs__container {
