@@ -8,64 +8,69 @@
 	 xmlns:spotify="https://www.spotify.com/ns/rss"
 	 xmlns:psc="https://podlove.org/simple-chapters/">
 	<channel>
-		<title>Fileconf - Test Podcast</title>
-		<itunes:title>Fileconf - Test Podcast</itunes:title>
+		<title>Mediocre Minds - Podcast</title>
+		<itunes:title>Mediocre Minds - Podcast</itunes:title>
+		<itunes:subtitle>A bunch of people with &quot;Mediocre Minds&quot; talk about stuff not limiting to a genre or category but exploring and discussing numerous things.</itunes:subtitle>
 
-		<itunes:subtitle>This Podcast is a part of the free podcast manager project for everyone</itunes:subtitle>
+		<googleplay:author>Mediocre Minds</googleplay:author>
+		<itunes:author>Mediocre Minds</itunes:author>
+		<author>Mediocre Minds</author>
 
-		<googleplay:author>Fileconf - Podcaster</googleplay:author>
-		<itunes:author>Fileconf - Podcaster</itunes:author>
-		<author>Fileconf - Podcaster</author>
-
-		<googleplay:email>fileconf@kunstpuls.de</googleplay:email>
+		<googleplay:email>mediocreminds.mm@gmail.com</googleplay:email>
 		<itunes:owner>
-			<itunes:email>fileconf@kunstpuls.de</itunes:email>
+			<itunes:email>mediocreminds.mm@gmail.com</itunes:email>
       <itunes:name>Fileconf</itunes:name>
 		</itunes:owner>
-		<managingEditor>fileconf@kunstpuls.de</managingEditor>
+		<managingEditor>mediocreminds.mm@gmail.com</managingEditor>
 
-		<googleplay:image href="https://fileconf.github.io/free-podcast-manager/podcast/test-podcast/assets/logo-2800x2800.png"/>
-		<itunes:image href="https://fileconf.github.io/free-podcast-manager/podcast/test-podcast/assets/logo-2800x2800.png"/>
-		<image href="https://fileconf.github.io/free-podcast-manager/podcast/test-podcast/assets/logo-2800x2800.png"/>
+		<googleplay:image href="https://mediocreminds.github.io/podcast/podcast/assets/logo-2800x2800.png"/>
+		<itunes:image href="https://mediocreminds.github.io/podcast/podcast/assets/logo-2800x2800.png"/>
+		<image href="https://mediocreminds.github.io/podcast/podcast/assets/logo-2800x2800.png"/>
 
-		<googleplay:description>Test mock podcast from fileconf</googleplay:description>
-		<itunes:summary>Test mock podcast from fileconf</itunes:summary>
-		<description>Test mock podcast from fileconf</description>
+		<googleplay:description>A bunch of people with &quot;Mediocre Minds&quot; talk about stuff not limiting to a genre or category but exploring and discussing numerous things.</googleplay:description>
+		<itunes:summary>A bunch of people with &quot;Mediocre Minds&quot; talk about stuff not limiting to a genre or category but exploring and discussing numerous things.</itunes:summary>
+		<description>A bunch of people with &quot;Mediocre Minds&quot; talk about stuff not limiting to a genre or category but exploring and discussing numerous things.</description>
 
-		<language>de</language>
+		<language>en tel</language>
 
-		<link>https://fileconf.github.io/free-podcast-manager</link>
+		<link>https://mediocreminds.github.io/podcast</link>
 
 		<googleplay:explicit>No</googleplay:explicit>
 		<itunes:explicit>no</itunes:explicit>
 
 		<googleplay:category text="News"/>
+		<googleplay:category text="Tech"/>
     <googleplay:category text="Comedy"/>
+    <googleplay:category text="Movies"/>
+    <googleplay:category text="Psychology"/>
+    <googleplay:category text="Finance"/>
     <googleplay:category text="Society &amp; Culture"/>
 
-		<itunes:category text="News">
-      		<itunes:category text="Tech News" />
-    </itunes:category>
-    <itunes:category text="Comedy">
-        <itunes:category text="Comedy Interviews" />
-    </itunes:category>
-    <itunes:category text="Society &amp; Culture">
-        <itunes:category text="Personal Journals" />
-    </itunes:category>
+		<itunes:category text="News"/>
+		<itunes:category text="Tech"/>
+    <itunes:category text="Comedy"/>
+		<itunes:category text="Movies"/>
+    <itunes:category text="Psychology"/>
+    <itunes:category text="Finance"/>
+    <itunes:category text="Society &amp; Culture"/>
     
     <itunes:type>episodic</itunes:type>
     
 		<category>News</category>
+		<category>Tech</category>
     <category>Comedy</category>
+		<category>Movies</category>
+		<category>Psychology</category>
+		<category>Finance</category>
     <category>Society &amp; Culture</category>
 
-		<copyright>℗ 2019 Fileconf</copyright>
+		<copyright>℗ 2022 Mediocre Minds</copyright>
 
-		<webMaster>fileconf@kunstpuls.de</webMaster>
+		<webMaster>mediocreminds.mm@gmail.com</webMaster>
 
-    <lastBuildDate>Fri, 10 Jan 2020 23:20:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 29 Jul 2022 23:20:00 GMT</lastBuildDate>
 
-		<generator>Fileconf Podcaster v1.0</generator>
+		<generator>Mediocre Minds v1.0</generator>
 
 		<ttl>60</ttl>
 
@@ -73,40 +78,40 @@
 
 		<spotify:limit recentCount="10" />
 
-		<spotify:countryOfOrigin>de at ch nl</spotify:countryOfOrigin>
+		<spotify:countryOfOrigin>in us ca</spotify:countryOfOrigin>
 
 		<item>
-			<title>Die Podcasting Welt kommt voran!</title>
-			<itunes:title>Die Podcasting Welt kommt voran!</itunes:title>
-			<media:title>Die Podcasting Welt kommt voran!</media:title>
+			<title>Mental Health</title>
+			<itunes:title>Mental Health</itunes:title>
+			<media:title>Mental Health</media:title>
 
-			<itunes:subtitle>Es geht weiter, mit dem einfachen Podcasting</itunes:subtitle>
+			<itunes:subtitle></itunes:subtitle>
 
-			<googleplay:author>Fileconf Core Team</googleplay:author>
-			<itunes:author>Fileconf Core Team</itunes:author>
-			<author>Fileconf Core Team</author>
+			<googleplay:author>Hari, Krushi and Vishal</googleplay:author>
+			<itunes:author>Hari, Krushi and Vishal</itunes:author>
+			<author>Hari, Krushi and Vishal</author>
 
-			<content:encoded><![CDATA[<i>Es geht weiter, mit dem einfachen Podcasting, wie sollte es möglich sein, das jeder kostenfrei einen Podcast erstellen kann? Ganz einfach mit Fileconf!</i>]]></content:encoded>
+			<content:encoded><![CDATA[<i>Hari, Krushi and Vishal talk about mental health and other related stuff</i>]]></content:encoded>
 
-			<enclosure url="https://fileconf.github.io/free-podcast-manager/podcast/test-podcast/episode/2/2.mp3" length="530451" type="audio/mpeg"/>
-			<media:content type="audio/mpeg" url="https://fileconf.github.io/free-podcast-manager/podcast/test-podcast/episode/2/2.mp3"/>
+			<enclosure url="https://mediocreminds.github.io/podcast/podcast/episode/2/2.mp3" length="530451" type="audio/mpeg"/>
+			<media:content type="audio/mpeg" url="https://mediocreminds.github.io/podcast/podcast/episode/2/2.mp3"/>
 
 			<itunes:duration>22</itunes:duration>
 
-			<googleplay:image href="https://fileconf.github.io/free-podcast-manager/podcast/test-podcast/episode/2/2.png"/>
-			<itunes:image href="https://fileconf.github.io/free-podcast-manager/podcast/test-podcast/episode/2/2.png"/>
-			<image href="https://fileconf.github.io/free-podcast-manager/podcast/test-podcast/episode/2/2.png"/>
+			<googleplay:image href="https://mediocreminds.github.io/podcast/podcast/episode/2/2.png"/>
+			<itunes:image href="https://mediocreminds.github.io/podcast/podcast/episode/2/2.png"/>
+			<image href="https://mediocreminds.github.io/podcast/podcast/episode/2/2.png"/>
 
-			<googleplay:description>Es geht weiter, mit dem einfachen Podcasting, wie sollte es möglich sein, das jeder kostenfrei einen Podcast erstellen kann? Ganz einfach mit Fileconf!</googleplay:description>
-			<itunes:summary>Es geht weiter, mit dem einfachen Podcasting, wie sollte es möglich sein, das jeder kostenfrei einen Podcast erstellen kann? Ganz einfach mit Fileconf!</itunes:summary>
-			<media:description>Es geht weiter, mit dem einfachen Podcasting, wie sollte es möglich sein, das jeder kostenfrei einen Podcast erstellen kann? Ganz einfach mit Fileconf!</media:description>
-			<description>Es geht weiter, mit dem einfachen Podcasting, wie sollte es möglich sein, das jeder kostenfrei einen Podcast erstellen kann? Ganz einfach mit Fileconf!</description>
+			<googleplay:description>Hari, Krushi and Vishal talk about mental health and other related stuff</googleplay:description>
+			<itunes:summary>Hari, Krushi and Vishal talk about mental health and other related stuff</itunes:summary>
+			<media:description>Hari, Krushi and Vishal talk about mental health and other related stuff</media:description>
+			<description>Hari, Krushi and Vishal talk about mental health and other related stuff</description>
 
-			<guid isPermaLink="true">https://fileconf.github.io/free-podcast-manager/podcast/test-podcast/episode/2/2.mp3</guid>
+			<guid isPermaLink="true">https://mediocreminds.github.io/podcast/podcast/episode/2/2.mp3</guid>
 
-			<link>https://fileconf.github.io/free-podcast-manager/podcast/test-podcast/episode/2</link>
+			<link>https://mediocreminds.github.io/podcast/podcast/episode/2</link>
 
-			<pubDate>Wed, 25 Sep 2019 10:30:00 GMT</pubDate>
+			<pubDate>Wed, 27 Jul 2022 10:30:00 GMT</pubDate>
 
 			<googleplay:explicit>No</googleplay:explicit>
 			<itunes:explicit>no</itunes:explicit>
@@ -118,47 +123,47 @@
 			<googleplay:block>no</googleplay:block>
 			<itunes:block>no</itunes:block>
 
-			<comments>https://fileconf.github.io/free-podcast-manager</comments>
+			<comments>https://mediocreminds.github.io/podcast</comments>
 
-			<source url="https://fileconf.github.io/free-podcast-manager/podcast/test-podcast/rss/feed.xml">Fileconf - Test Podcast</source>
+			<source url="https://mediocreminds.github.io/podcast/podcast/rss/feed.xml">Mediocre Minds - Podcast</source>
 
-			<media:restriction type="country" relationship="allow">de at ch nl</media:restriction>
+			<media:restriction type="country" relationship="allow">in us ca</media:restriction>
 			
-			<itunes:keywords>tech,podcast,hosting,fileconf</itunes:keywords>
+			<itunes:keywords>mental,podcast,mental health,mediocreminds,friends,family,disorder,anxiety</itunes:keywords>
       <itunes:episodeType>full</itunes:episodeType>
 		</item>
 		<item>
-			<title>[01]-Test Episode</title>
-			<itunes:title>[01]-Test Episode</itunes:title>
-			<media:title>[01]-Test Episode</media:title>
+			<title>Life of Software Employee</title>
+			<itunes:title>Life of Software Employee</itunes:title>
+			<media:title>Life of Software Employee</media:title>
 
-			<itunes:subtitle>This Episode provides a sample release</itunes:subtitle>
+			<itunes:subtitle></itunes:subtitle>
 
-			<googleplay:author>Fileconf Core Team</googleplay:author>
-			<itunes:author>Fileconf Core Team</itunes:author>
-			<author>Fileconf Core Team</author>
+			<googleplay:author>Durga Prasad, Krushi and Vishal</googleplay:author>
+			<itunes:author>Durga Prasad, Krushi and Vishal</itunes:author>
+			<author>Durga Prasad, Krushi and Vishal</author>
 
-			<content:encoded><![CDATA[<i>Description of your episode</i>]]></content:encoded>
+			<content:encoded><![CDATA[<i>Three software engineers discuss about life of a software engineer and explain few things for non software guys.</i>]]></content:encoded>
 
-			<enclosure url="https://fileconf.github.io/free-podcast-manager/podcast/test-podcast/episode/1/1.mp3" length="276782" type="audio/mpeg"/>
-			<media:content type="audio/mpeg" url="https://fileconf.github.io/free-podcast-manager/podcast/test-podcast/episode/1/1.mp3"/>
+			<enclosure url="https://mediocreminds.github.io/podcast/podcast/episode/1/1.mp3" length="276782" type="audio/mpeg"/>
+			<media:content type="audio/mpeg" url="https://mediocreminds.github.io/podcast/podcast/episode/1/1.mp3"/>
 
 			<itunes:duration>11</itunes:duration>
 
-			<googleplay:image href="https://fileconf.github.io/free-podcast-manager/podcast/test-podcast/episode/1/1.png"/>
-			<itunes:image href="https://fileconf.github.io/free-podcast-manager/podcast/test-podcast/episode/1/1.png"/>
-			<image href="https://fileconf.github.io/free-podcast-manager/podcast/test-podcast/episode/1/1.png"/>
+			<googleplay:image href="https://mediocreminds.github.io/podcast/podcast/episode/1/1.png"/>
+			<itunes:image href="https://mediocreminds.github.io/podcast/podcast/episode/1/1.png"/>
+			<image href="https://mediocreminds.github.io/podcast/podcast/episode/1/1.png"/>
 
-			<googleplay:description>Description of your episode</googleplay:description>
-			<itunes:summary>Description of your episode</itunes:summary>
-			<media:description>Description of your episode</media:description>
-			<description>Description of your episode</description>
+			<googleplay:description>Three software engineers discuss about life of a software engineer and explain few things for non software guys.</googleplay:description>
+			<itunes:summary>Three software engineers discuss about life of a software engineer and explain few things for non software guys.</itunes:summary>
+			<media:description>Three software engineers discuss about life of a software engineer and explain few things for non software guys.</media:description>
+			<description>Three software engineers discuss about life of a software engineer and explain few things for non software guys.</description>
 
-			<guid isPermaLink="true">https://fileconf.github.io/free-podcast-manager/podcast/test-podcast/episode/1/1.mp3</guid>
+			<guid isPermaLink="true">https://mediocreminds.github.io/podcast/podcast/episode/1/1.mp3</guid>
 
-			<link>https://fileconf.github.io/free-podcast-manager/podcast/test-podcast/episode/1</link>
+			<link>https://mediocreminds.github.io/podcast/podcast/episode/1</link>
 
-			<pubDate>Tue, 03 Feb 2015 23:00:00 GMT</pubDate>
+			<pubDate>Wed, 20 Jul 2022 23:00:00 GMT</pubDate>
 
 			<googleplay:explicit>No</googleplay:explicit>
 			<itunes:explicit>no</itunes:explicit>
@@ -170,20 +175,20 @@
 			<googleplay:block>no</googleplay:block>
 			<itunes:block>no</itunes:block>
 
-			<comments>https://fileconf.github.io/free-podcast-manager</comments>
+			<comments>https://mediocreminds.github.io/podcast</comments>
 
-			<source url="https://fileconf.github.io/free-podcast-manager/podcast/test-podcast/rss/feed.xml">Name of the remote podcast</source>
+			<source url="https://mediocreminds.github.io/podcast/podcast/rss/feed.xml">Mediocre Minds</source>
 
 			<media:restriction type="country" relationship="allow">de at ch nl</media:restriction>
 			
 			<psc:chapters>
-				<psc:chapter start="0" title="Start Mark - 01"/>
-				<psc:chapter start="0:04" title="Testaufnahme"/>
-				<psc:chapter start="0:07" title="Herzlich Willkommen!"/>
+				<psc:chapter start="0" title="Intro"/>
+				<psc:chapter start="0:04" title="Start of Topic"/>
+				<psc:chapter start="0:07" title="Getting into the topic"/>
 				<psc:chapter start="0:10" title="End credits"/>
 			</psc:chapters>
 			
-			<itunes:keywords>tech,podcast,hosting,fileconf</itunes:keywords>
+			<itunes:keywords>tech,podcast,software,life</itunes:keywords>
       <itunes:episodeType>full</itunes:episodeType>
 		</item>
 	</channel>
