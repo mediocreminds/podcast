@@ -1,4 +1,4 @@
-## Install and run free-podcast-manager
+## Install and run podcast
 
 ### `npm install`
 ### `npm start`
@@ -34,3 +34,10 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+
+# Deployment Steps
+
+- First make sure your changes are good to go on `main` branch
+- Then merge changes from `main` to `podcast` (we always use `podcast` branch as prodoction branch, and every change must go from adhoc branch -> main -> podcast)
+- Github Pages action will automatically deploy the new changes
