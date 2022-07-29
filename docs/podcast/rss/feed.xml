@@ -93,23 +93,23 @@
 
 			<content:encoded><![CDATA[<i>Hari, Krushi and Vishal talk about mental health and other related stuff</i>]]></content:encoded>
 
-			<enclosure url="https://mediocreminds.github.io/podcast/podcast/episode/2/2.mp3" length="530451" type="audio/mpeg"/>
-			<media:content type="audio/mpeg" url="https://mediocreminds.github.io/podcast/podcast/episode/2/2.mp3"/>
+			<enclosure url="https://mediocreminds.github.io/podcast/podcast/episode/mental-health/mental-health.mp3" length="530451" type="audio/mpeg"/>
+			<media:content type="audio/mpeg" url="https://mediocreminds.github.io/podcast/podcast/episode/mental-health/mental-health.mp3"/>
 
 			<itunes:duration>22</itunes:duration>
 
-			<googleplay:image href="https://mediocreminds.github.io/podcast/podcast/episode/2/2.png"/>
-			<itunes:image href="https://mediocreminds.github.io/podcast/podcast/episode/2/2.png"/>
-			<image href="https://mediocreminds.github.io/podcast/podcast/episode/2/2.png"/>
+			<googleplay:image href="https://mediocreminds.github.io/podcast/podcast/episode/mental-health/mental-health.png"/>
+			<itunes:image href="https://mediocreminds.github.io/podcast/podcast/episode/mental-health/mental-health.png"/>
+			<image href="https://mediocreminds.github.io/podcast/podcast/episode/mental-health/mental-health.png"/>
 
 			<googleplay:description>Hari, Krushi and Vishal talk about mental health and other related stuff</googleplay:description>
 			<itunes:summary>Hari, Krushi and Vishal talk about mental health and other related stuff</itunes:summary>
 			<media:description>Hari, Krushi and Vishal talk about mental health and other related stuff</media:description>
 			<description>Hari, Krushi and Vishal talk about mental health and other related stuff</description>
 
-			<guid isPermaLink="true">https://mediocreminds.github.io/podcast/podcast/episode/2/2.mp3</guid>
+			<guid isPermaLink="true">https://mediocreminds.github.io/podcast/podcast/episode/mental-health/mental-health.mp3</guid>
 
-			<link>https://mediocreminds.github.io/podcast/podcast/episode/2</link>
+			<link>https://mediocreminds.github.io/podcast/podcast/episode/mental-health</link>
 
 			<pubDate>Wed, 27 Jul 2022 10:30:00 GMT</pubDate>
 
@@ -145,23 +145,23 @@
 
 			<content:encoded><![CDATA[<i>Three software engineers discuss about life of a software engineer and explain few things for non software guys.</i>]]></content:encoded>
 
-			<enclosure url="https://mediocreminds.github.io/podcast/podcast/episode/1/1.mp3" length="276782" type="audio/mpeg"/>
-			<media:content type="audio/mpeg" url="https://mediocreminds.github.io/podcast/podcast/episode/1/1.mp3"/>
+			<enclosure url="https://mediocreminds.github.io/podcast/podcast/episode/software-life/software-life.mp3" length="276782" type="audio/mpeg"/>
+			<media:content type="audio/mpeg" url="https://mediocreminds.github.io/podcast/podcast/episode/software-life/software-life.mp3"/>
 
 			<itunes:duration>11</itunes:duration>
 
-			<googleplay:image href="https://mediocreminds.github.io/podcast/podcast/episode/1/1.png"/>
-			<itunes:image href="https://mediocreminds.github.io/podcast/podcast/episode/1/1.png"/>
-			<image href="https://mediocreminds.github.io/podcast/podcast/episode/1/1.png"/>
+			<googleplay:image href="https://mediocreminds.github.io/podcast/podcast/episode/software-life/software-life.png"/>
+			<itunes:image href="https://mediocreminds.github.io/podcast/podcast/episode/software-life/software-life.png"/>
+			<image href="https://mediocreminds.github.io/podcast/podcast/episode/software-life/software-life.png"/>
 
 			<googleplay:description>Three software engineers discuss about life of a software engineer and explain few things for non software guys.</googleplay:description>
 			<itunes:summary>Three software engineers discuss about life of a software engineer and explain few things for non software guys.</itunes:summary>
 			<media:description>Three software engineers discuss about life of a software engineer and explain few things for non software guys.</media:description>
 			<description>Three software engineers discuss about life of a software engineer and explain few things for non software guys.</description>
 
-			<guid isPermaLink="true">https://mediocreminds.github.io/podcast/podcast/episode/1/1.mp3</guid>
+			<guid isPermaLink="true">https://mediocreminds.github.io/podcast/podcast/episode/software-life/software-life.mp3</guid>
 
-			<link>https://mediocreminds.github.io/podcast/podcast/episode/1</link>
+			<link>https://mediocreminds.github.io/podcast/podcast/episode/software-life</link>
 
 			<pubDate>Wed, 20 Jul 2022 23:00:00 GMT</pubDate>
 
