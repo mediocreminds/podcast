@@ -1,5 +1,3 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/49629466-a6fa-4ccf-b064-0c1458aa5313/deploy-status?branch=podcast)](https://app.netlify.com/sites/mediocreminds/deploys)
-
 ## Install and run podcast
 
 ### `yarn install`
