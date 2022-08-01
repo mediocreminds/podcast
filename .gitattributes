@@ -1,0 +1,6 @@
+public/episodes/mental-health/episode.mp3 filter=lfs diff=lfs merge=lfs -text
+public/episodes/software-life/episode.mp3 filter=lfs diff=lfs merge=lfs -text
+public/episodes/mental-health/cover.png filter=lfs diff=lfs merge=lfs -text
+public/episodes/mental-health/social.png filter=lfs diff=lfs merge=lfs -text
+public/episodes/software-life/cover.png filter=lfs diff=lfs merge=lfs -text
+public/episodes/software-life/social.png filter=lfs diff=lfs merge=lfs -text
