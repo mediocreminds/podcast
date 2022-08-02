@@ -38,9 +38,9 @@ function Waveform(props) {
           <stop offset="100%" stopColor="black" />
         </linearGradient>
         <linearGradient id={`${id}-gradient`}>
-          <stop offset="0%" stopColor="#4989E8" />
-          <stop offset="50%" stopColor="#6159DA" />
-          <stop offset="100%" stopColor="#FF54AD" />
+          <stop offset="0%" stopColor="#6366f1" />
+          <stop offset="50%" stopColor="#3b82f6" />
+          <stop offset="100%" stopColor="#06b6d4" />
         </linearGradient>
         <mask id={`${id}-mask`}>
           <rect width="100%" height="100%" fill={`url(#${id}-pattern)`} />
@@ -301,7 +301,9 @@ function AboutSection(props) {
           !isExpanded && 'lg:line-clamp-4'
         )}
       >
-        A bunch of people with &quot;Mediocre Minds&quot; talk about stuff not limiting to a genre or category but exploring and discussing numerous things.
+        A bunch of people with &quot;Mediocre Minds&quot; talk about stuff not
+        limiting to a genre or category but exploring and discussing numerous
+        things.
       </p>
       {!isExpanded && (
         <button
@@ -337,7 +339,7 @@ export function Layout({ children }) {
             ))}
           </span>
         </div>
-        <div className="relative z-10 mx-auto px-4 pb-4 pt-10 sm:px-6 md:max-w-2xl md:px-4 lg:min-h-full lg:flex-auto lg:border-x lg:border-slate-200 lg:py-12 lg:px-8 xl:px-12">
+        <div className="relative z-10 mx-auto px-4 pb-4 pt-10 sm:px-6 md:max-w-2xl md:px-4 lg:min-h-full lg:flex-auto lg:border-x lg:border-cyan-600/20 lg:py-12 lg:px-8 xl:px-12">
           <Link
             href="/"
             className="bg-white-200 shadow-white-200 relative mx-auto block w-48 overflow-hidden rounded-lg shadow-xl sm:w-64 sm:rounded-xl lg:w-auto lg:rounded-2xl"
@@ -378,9 +380,9 @@ export function Layout({ children }) {
               {[
                 ['Spotify', SpotifyIcon, siteConfig.listen.spotify],
                 ['Apple Podcast', ApplePodcastIcon, siteConfig.listen.apple],
+                ['RSS Feed', RSSIcon, '/rss/feed.xml'],
                 // ['Google Podcast', GooglePodcastIcon, siteConfig.listen.google],
                 // ['Overcast', OvercastIcon, siteConfig.listen.overcast],
-                // ['RSS Feed', RSSIcon, siteConfig.listen.rss],
               ].map(([label, Icon, href]) => (
                 <li key={label} className="flex">
                   <Link
@@ -388,8 +390,10 @@ export function Layout({ children }) {
                     className="group flex items-center"
                     aria-label={label}
                   >
-                    <Icon className="h-8 w-8 opacity-60 group-hover:opacity-100" />
-                    <span className="text-slate-400 hover:text-slate-800 hidden sm:ml-3 sm:block">{label}</span>
+                    <Icon className="h-8 w-8 group-hover:opacity-60" />
+                    <span className="hidden text-slate-800 hover:text-slate-400 sm:ml-3 sm:block">
+                      {label}
+                    </span>
                   </Link>
                 </li>
               ))}
