@@ -380,15 +380,15 @@ export function Layout({ children }) {
               {[
                 ['Spotify', SpotifyIcon, siteConfig.listen.spotify],
                 ['Apple Podcast', ApplePodcastIcon, siteConfig.listen.apple],
+                ['Google Podcast', GooglePodcastIcon, siteConfig.listen.google],
                 ['RSS Feed', RSSIcon, '/rss/feed.xml'],
-                // ['Google Podcast', GooglePodcastIcon, siteConfig.listen.google],
-                // ['Overcast', OvercastIcon, siteConfig.listen.overcast],
               ].map(([label, Icon, href]) => (
                 <li key={label} className="flex">
                   <Link
                     href={href}
                     className="group flex items-center"
                     aria-label={label}
+                    target="_blank"
                   >
                     <Icon className="h-8 w-8 group-hover:opacity-60" />
                     <span className="hidden text-slate-800 hover:text-slate-400 sm:ml-3 sm:block">
