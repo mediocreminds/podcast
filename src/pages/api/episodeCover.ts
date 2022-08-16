@@ -1,7 +1,7 @@
 import * as playwright from 'playwright-aws-lambda'
 import { NextApiRequest, NextApiResponse } from 'next'
 
-const coverPageHtml = (title: string, episode: number, authors: string) => {
+const coverPageHtml = (title: string, episode: string, authors: string) => {
   return `<html><body style="inset:0; margin: 0; padding: 0"><div style="overflow: hidden; font-family: Space Grotesk,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji; display: flex; flex-direction: column; width: 350px; height: 350px; background: rgba(0, 0, 0, 0) linear-gradient(to right bottom, rgb(212, 212, 216), rgb(103, 232, 249)) repeat scroll 0% 0% / auto padding-box border-box;">
   <h1 style="font-weight: bold; text-align: center; margin: 10px 0 0 0;">
     Mediocre Minds
@@ -28,7 +28,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     },
   })
 
-  const { title, episode, authors } = req.query
+  const { title, episode, authors }: { title: string, episode: string, author: string } = req.query
   await page.setContent(coverPageHtml(title, episode, authors))
   const data = await page.screenshot({
     type: 'png',
