@@ -28,8 +28,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     },
   })
 
-  const { title, episode, authors } = req.query
-  await page.setContent(coverPageHtml(title as string, episode as string, authors as string))
+  const { title, episode, authors }: { title: string; episode: string; authors: string } = JSON.parse(req.query.data)
+  await page.setContent(coverPageHtml(title, episode, authors))
   const data = await page.screenshot({
     type: 'png',
   })
