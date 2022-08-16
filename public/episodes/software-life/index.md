@@ -7,7 +7,6 @@ description: "Three software engineers discuss about life of a software engineer
 audioUrl: "episode.mp3"
 audioType: "audio/mp3"
 duration: "4499"
-cover: "cover.png"
 pubDate: "Wed, 20 Jul 2022 23:00:00 GMT"
 season: "1"
 episode: "1"

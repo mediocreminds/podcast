@@ -124,15 +124,9 @@ const path = require('path')
   
         <itunes:duration>${episode.duration}</itunes:duration>
   
-        <googleplay:image href="${baseMatter.link}/episodes/${episode.slug}/${
-            episode.cover
-          }"/>
-        <itunes:image href="${baseMatter.link}/episodes/${episode.slug}/${
-            episode.cover
-          }"/>
-        <image href="${baseMatter.link}/episodes/${episode.slug}/${
-            episode.cover
-          }"/>
+        <googleplay:image href="${baseMatter.link}/api/episodeCover?title=${metadata.title}&episode=${metadata.episode}&authors=${metadata.author}"/>
+        <itunes:image href="${baseMatter.link}/api/episodeCover?title=${metadata.title}&episode=${metadata.episode}&authors=${metadata.author}"/>
+        <image href="${baseMatter.link}/api/episodeCover?title=${metadata.title}&episode=${metadata.episode}&authors=${metadata.author}"/>
   
         <googleplay:description>${episode.description}</googleplay:description>
         <itunes:summary>${episode.description}</itunes:summary>

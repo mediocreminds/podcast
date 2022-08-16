@@ -7,7 +7,6 @@ description: 'Hari, Krushi and Vishal talk about code reviews and how one should
 audioUrl: 'episode.mp3'
 audioType: 'audio/mp3'
 duration: '3481'
-cover: 'cover.png'
 pubDate: 'Wed, 10 Aug 2022 10:30:00 GMT'
 season: '1'
 episode: '3'
