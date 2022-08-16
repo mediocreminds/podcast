@@ -7,7 +7,6 @@ description: "Hari, Krushi and Vishal talk about mental health and other related
 audioUrl: "episode.mp3"
 audioType: "audio/mp3"
 duration: "3296"
-cover: "cover.png"
 pubDate: "Wed, 27 Jul 2022 10:30:00 GMT"
 season: "1"
 episode: "2"

@@ -15,9 +15,16 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "next": ["node_modules/next"],
+      "playwright-aws-lambda": ["node_modules/playwright-aws-lambda"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/lib/markdownToHTML.js"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/lib/markdownToHTML.js"
+  ],
   "exclude": ["node_modules"]
 }
