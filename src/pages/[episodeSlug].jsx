@@ -9,7 +9,6 @@ import { PlayButton } from '@/components/player/PlayButton'
 import matter from 'gray-matter'
 import { readdirSync, readFileSync, statSync } from 'fs'
 import markdownToHTML from '@/lib/markdownToHTML'
-import Link from 'next/link'
 import { BackToAllEpisodes } from '../components/player/BackToAllEpisodes'
 import Favicons from '../components/player/Favicons'
 
