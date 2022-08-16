@@ -124,9 +124,9 @@ const path = require('path')
   
         <itunes:duration>${episode.duration}</itunes:duration>
   
-        <googleplay:image href="${baseMatter.link}/api/episodeCover?title=${episode.title}&episode=${episode.episode}&authors=${episode.author}"/>
-        <itunes:image href="${baseMatter.link}/api/episodeCover?title=${episode.title}&episode=${episode.episode}&authors=${episode.author}"/>
-        <image href="${baseMatter.link}/api/episodeCover?title=${episode.title}&episode=${episode.episode}&authors=${episode.author}"/>
+        <googleplay:image href="${encodeURI(`${encodeURI(`${baseMatter.link}/api/episodeCover?title=${episode.title}&episode=${episode.episode}&authors=${episode.author}`)}`)}"/>
+        <itunes:image href="${encodeURI(`${baseMatter.link}/api/episodeCover?title=${episode.title}&episode=${episode.episode}&authors=${episode.author}`)}"/>
+        <image href="${encodeURI(`${baseMatter.link}/api/episodeCover?title=${episode.title}&episode=${episode.episode}&authors=${episode.author}`)}"/>
   
         <googleplay:description>${episode.description}</googleplay:description>
         <itunes:summary>${episode.description}</itunes:summary>
