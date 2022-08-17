@@ -37,7 +37,7 @@ function EpisodeEntry({ episode: { metadata, slug, hasNotes } }) {
     () => ({
       title: metadata.title,
       audio: {
-        src: `https://raw.githubusercontent.com/mediocreminds/podcast/main/episodes/${slug}/${metadata.audioUrl}`,
+        src: `https://media.githubusercontent.com/media/mediocreminds/podcast/main/episodes/${slug}/${metadata.audioUrl}`,
         type: metadata.audioType,
       },
       link: `/${slug}`,
