@@ -72,6 +72,12 @@ export default function Episode({ metadata, content, slug }) {
 }
 
 export async function getStaticProps({ params: { episodeSlug } }) {
+  if (episodeSlug === 'favicon.ico') {
+    return {
+      notFound: true,
+    }
+  }
+
   const episodeDir = path.resolve(
     `${process.cwd()}/episodes/${episodeSlug}`
   )
