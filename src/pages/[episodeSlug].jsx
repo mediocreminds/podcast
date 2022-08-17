@@ -21,7 +21,7 @@ export default function Episode({ metadata, content, slug }) {
     () => ({
       title: metadata.title,
       audio: {
-        src: `https://raw.githubusercontent.com/mediocreminds/podcast/main/public/episodes/${slug}/${metadata.audioUrl}`,
+        src: `https://raw.githubusercontent.com/mediocreminds/podcast/main/episodes/${slug}/${metadata.audioUrl}`,
         type: metadata.audioType,
       },
       link: `/${slug}`,
@@ -73,7 +73,7 @@ export default function Episode({ metadata, content, slug }) {
 
 export async function getStaticProps({ params: { episodeSlug } }) {
   const episodeDir = path.resolve(
-    `${process.cwd()}/public/episodes/${episodeSlug}`
+    `${process.cwd()}/episodes/${episodeSlug}`
   )
   if (!statSync(episodeDir).isDirectory()) {
     return {
@@ -97,7 +97,7 @@ export async function getStaticProps({ params: { episodeSlug } }) {
 }
 
 export async function getStaticPaths() {
-  const episodesDir = path.resolve(`${process.cwd()}/public/episodes`)
+  const episodesDir = path.resolve(`${process.cwd()}/episodes`)
   const episodes = statSync(episodesDir).isDirectory()
     ? readdirSync(episodesDir)
     : []

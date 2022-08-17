@@ -37,7 +37,7 @@ function EpisodeEntry({ episode: { metadata, slug, hasNotes } }) {
     () => ({
       title: metadata.title,
       audio: {
-        src: `https://raw.githubusercontent.com/mediocreminds/podcast/main/public/episodes/${slug}/${metadata.audioUrl}`,
+        src: `https://raw.githubusercontent.com/mediocreminds/podcast/main/episodes/${slug}/${metadata.audioUrl}`,
         type: metadata.audioType,
       },
       link: `/${slug}`,
@@ -133,7 +133,7 @@ export default function Home({ episodes }) {
 
 export async function getStaticProps() {
   // TODO This is a quick fix. Change this to read local files and get data from it
-  const episodeSlugs = fs.readdirSync(`${process.cwd()}/public/episodes`)
+  const episodeSlugs = fs.readdirSync(`${process.cwd()}/episodes`)
   const episodes = []
   for (const slug of episodeSlugs) {
     if (slug === 'base.md') {
@@ -141,7 +141,7 @@ export async function getStaticProps() {
     }
 
     const markdown = fs.readFileSync(
-      `${process.cwd()}/public/episodes/${slug}/index.md`,
+      `${process.cwd()}/episodes/${slug}/index.md`,
       'utf8'
     )
     const { data: metadata, content } = matter(markdown)
