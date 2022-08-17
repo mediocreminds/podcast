@@ -113,14 +113,12 @@ const path = require('path')
   
         <content:encoded><![CDATA[<i>${episode.content}</i>]]></content:encoded>
   
-        <enclosure url="${baseMatter.link}/episodes/${episode.slug}/${
+        <enclosure url="https://raw.githubusercontent.com/mediocreminds/podcast/main/public//episodes/${episode.slug}/${
             episode.audioUrl
           }" length="${
             fs.statSync(`${episodesDir}/${episode.slug}/episode.mp3`).size
           }" type="${episode.audioType}"/>
-        <media:content type="${episode.audioType}" url="${
-            baseMatter.link
-          }/episodes/${episode.slug}/${episode.audioUrl}"/>
+        <media:content type="${episode.audioType}" url="https://raw.githubusercontent.com/mediocreminds/podcast/main/public/episodes/${episode.slug}/${episode.audioUrl}"/>
   
         <itunes:duration>${episode.duration}</itunes:duration>
   
@@ -133,7 +131,7 @@ const path = require('path')
         <media:description>${episode.description}</media:description>
         <description>${episode.description}</description>
   
-        <guid isPermaLink="true">${baseMatter.link}/episodes/${episode.slug}/${
+        <guid isPermaLink="true">https://raw.githubusercontent.com/mediocreminds/podcast/main/public/episodes/${episode.slug}/${
             episode.audioUrl
           }</guid>
   

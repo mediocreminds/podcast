@@ -21,7 +21,7 @@ export default function Episode({ metadata, content, slug }) {
     () => ({
       title: metadata.title,
       audio: {
-        src: `/episodes/${slug}/${metadata.audioUrl}`,
+        src: `https://raw.githubusercontent.com/mediocreminds/podcast/main/public/episodes/${slug}/${metadata.audioUrl}`,
         type: metadata.audioType,
       },
       link: `/${slug}`,

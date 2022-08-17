@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "yarn generate:rss && next build && next export && yarn remove:md",
+    "build": "yarn generate:rss && next build && yarn remove:md",
     "start": "next start",
     "lint": "next lint",
     "generate:rss": "node ./scripts/generateRssFeed.js",
