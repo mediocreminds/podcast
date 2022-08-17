@@ -3,7 +3,7 @@ const matter = require('gray-matter')
 const path = require('path')
 
 ;(async () => {
-  const episodesDir = path.join(__dirname, '..', 'public', 'episodes')
+  const episodesDir = path.join(__dirname, '..', 'episodes')
   // check if at least one episode exists
   const episodeSlugs = fs
     .readdirSync(episodesDir)
@@ -11,7 +11,7 @@ const path = require('path')
   if (episodeSlugs.length === 0) {
     throw new Error('No episodes found. RSS not generated.')
   }
-  // check if public/episodes/base.md exists
+  // check if episodes/base.md exists
   const baseEpisodePath = path.join(episodesDir, 'base.md')
   if (!fs.existsSync(baseEpisodePath)) {
     throw new Error('base.md not found. RSS not generated.')
@@ -113,12 +113,12 @@ const path = require('path')
   
         <content:encoded><![CDATA[<i>${episode.content}</i>]]></content:encoded>
   
-        <enclosure url="https://raw.githubusercontent.com/mediocreminds/podcast/main/public//episodes/${episode.slug}/${
+        <enclosure url="https://raw.githubusercontent.com/mediocreminds/podcast/main/episodes/${episode.slug}/${
             episode.audioUrl
           }" length="${
             fs.statSync(`${episodesDir}/${episode.slug}/episode.mp3`).size
           }" type="${episode.audioType}"/>
-        <media:content type="${episode.audioType}" url="https://raw.githubusercontent.com/mediocreminds/podcast/main/public/episodes/${episode.slug}/${episode.audioUrl}"/>
+        <media:content type="${episode.audioType}" url="https://raw.githubusercontent.com/mediocreminds/podcast/main/episodes/${episode.slug}/${episode.audioUrl}"/>
   
         <itunes:duration>${episode.duration}</itunes:duration>
   
@@ -131,7 +131,7 @@ const path = require('path')
         <media:description>${episode.description}</media:description>
         <description>${episode.description}</description>
   
-        <guid isPermaLink="true">https://raw.githubusercontent.com/mediocreminds/podcast/main/public/episodes/${episode.slug}/${
+        <guid isPermaLink="true">https://raw.githubusercontent.com/mediocreminds/podcast/main/episodes/${episode.slug}/${
             episode.audioUrl
           }</guid>
   
