@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import fs from 'fs'
@@ -107,7 +107,56 @@ function EpisodeEntry({ episode: { metadata, slug, hasNotes } }) {
   )
 }
 
+function EpisodeSearchBar({
+  query,
+  setQuery,
+  searchClicked,
+  setSearchClicked,
+}) {
+  return searchClicked ? (
+    <input
+      id="search-bar"
+      className="focus:shadow-outline-blue relative -top-1 ml-auto block w-auto appearance-none rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-medium leading-5 text-slate-900 placeholder-slate-500 shadow-sm transition duration-150 ease-in-out focus:border-blue-300 focus:placeholder-slate-400 focus:outline-none sm:text-sm sm:leading-5"
+      placeholder="Search for Episodes"
+      type="text"
+      value={query}
+      onChange={(e) => setQuery(e.target.value)}
+      ref={(input) => input && input.focus()}
+    />
+  ) : (
+    <button
+      id="search-button"
+      type="button"
+      onClick={(e) => {
+        e.stopPropagation()
+        setSearchClicked(true)
+      }}
+      className="focus:shadow-outline-blue relative -top-1 ml-auto block w-auto appearance-none rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-medium leading-5 text-slate-900 placeholder-slate-500 shadow-sm transition duration-150 ease-in-out focus:border-blue-300 focus:placeholder-slate-400 focus:outline-none sm:text-sm sm:leading-5"
+    >
+      <svg
+        aria-hidden="true"
+        class="h-5 w-5"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+        ></path>
+      </svg>
+      <span class="sr-only">Search</span>
+    </button>
+  )
+}
+
 export default function Home({ episodes }) {
+  const [query, setQuery] = useState('')
+  const [searchClicked, setSearchClicked] = useState(false)
+
   return (
     <>
       <Head>
@@ -115,11 +164,27 @@ export default function Home({ episodes }) {
         <meta name="description" content={siteConfig.description} />
         <Favicons />
       </Head>
-      <div className="pt-16 pb-12 sm:pb-4 lg:pt-12">
+      <div
+        className="pt-16 pb-12 sm:pb-4 lg:pt-12"
+        onClick={(e) => {
+          if (e.target.id !== 'search-bar' && e.target.id !== 'search-button') {
+            setSearchClicked(false)
+            setQuery('')
+          }
+        }}
+      >
         <Container>
-          <h1 className="text-2xl font-bold leading-7 text-slate-900">
-            Episodes
-          </h1>
+          <div className="flex-column flex">
+            <h1 className="text-2xl font-bold leading-7 text-slate-900">
+              Episodes
+            </h1>
+            <EpisodeSearchBar
+              query={query}
+              setQuery={setQuery}
+              searchClicked={searchClicked}
+              setSearchClicked={setSearchClicked}
+            />
+          </div>
         </Container>
         <div className="divide-y divide-slate-100 sm:mt-4 lg:mt-8 lg:border-t lg:border-slate-100">
           {episodes.map((episode) => (
