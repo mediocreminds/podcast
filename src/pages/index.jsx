@@ -174,7 +174,7 @@ export default function Home({ episodes }) {
         }}
       >
         <Container>
-          <div className="flex-column flex">
+          <div className="flex-column flex items-center">
             <h1 className="text-2xl font-bold leading-7 text-slate-900">
               Episodes
             </h1>
