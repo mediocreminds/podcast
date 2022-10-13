@@ -116,7 +116,7 @@ function EpisodeSearchBar({
   return searchClicked ? (
     <input
       id="search-bar"
-      className="focus:shadow-outline-blue relative -top-1 ml-auto block w-auto appearance-none rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-medium leading-5 text-slate-900 placeholder-slate-500 shadow-sm transition duration-150 ease-in-out focus:border-blue-300 focus:placeholder-slate-400 focus:outline-none sm:text-sm sm:leading-5"
+      className="focus:shadow-outline-blue ml-auto block w-auto appearance-none rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-medium leading-5 text-slate-900 placeholder-slate-500 shadow-sm transition duration-150 ease-in-out focus:border-blue-300 focus:placeholder-slate-400 focus:outline-none sm:text-sm sm:leading-5"
       placeholder="Search for Episodes"
       type="text"
       value={query}
