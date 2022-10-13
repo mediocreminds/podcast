@@ -148,14 +148,71 @@ function EpisodeSearchBar({
           d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
         ></path>
       </svg>
-      <span class="sr-only">Search</span>
     </button>
+  )
+}
+
+function filterEpisodes(episodes, query) {
+  if (!query) {
+    return episodes
+  }
+  const result = []
+  const tokens = query.trim().split(/\s/)
+
+  for (const episode of episodes) {
+    if (
+      tokens
+        .some(
+          (token) =>
+            new RegExp(token, 'i').test(episode.metadata.title) ||
+            new RegExp(token, 'i').test(episode.metadata.subtitle) ||
+            new RegExp(token, 'i').test(episode.metadata.content) ||
+            new RegExp(token, 'i').test(episode.metadata.description)
+        )
+    ) {
+      result.push(episode)
+      continue
+    }
+
+    if (
+      tokens
+        .some(
+          (token) =>
+            episode.metadata.keywords &&
+            episode.metadata.keywords.split(/,\s?/).some((keyword) =>
+              new RegExp(token, 'i').test(keyword)
+            )
+        )
+    ) {
+      result.push(episode)
+      continue
+    }
+
+    if (
+      tokens
+        .some(
+          (token) =>
+            episode.metadata.author &&
+            episode.metadata.author.split(/,\s?/).some((author) =>
+              new RegExp(token, 'i').test(author)
+            )
+        )
+    ) {
+      result.push(episode)
+      continue
+    }
+  }
+
+  return result.sort(
+    ({ metadata: { pubDate: a } }, { metadata: { pubDate: b } }) =>
+      new Date(b) - new Date(a)
   )
 }
 
 export default function Home({ episodes }) {
   const [query, setQuery] = useState('')
   const [searchClicked, setSearchClicked] = useState(false)
+  const filteredEpisodes = filterEpisodes(episodes, query)
 
   return (
     <>
@@ -187,7 +244,7 @@ export default function Home({ episodes }) {
           </div>
         </Container>
         <div className="divide-y divide-slate-100 sm:mt-4 lg:mt-8 lg:border-t lg:border-slate-100">
-          {episodes.map((episode) => (
+          {filteredEpisodes.map((episode) => (
             <EpisodeEntry key={episode.slug} episode={episode} />
           ))}
         </div>
@@ -197,7 +254,6 @@ export default function Home({ episodes }) {
 }
 
 export async function getStaticProps() {
-  // TODO This is a quick fix. Change this to read local files and get data from it
   const episodeSlugs = fs.readdirSync(`${process.cwd()}/episodes`)
   const episodes = []
   for (const slug of episodeSlugs) {
@@ -217,7 +273,7 @@ export async function getStaticProps() {
     props: {
       episodes: episodes.sort(
         ({ metadata: { pubDate: a } }, { metadata: { pubDate: b } }) =>
-          new Date(a) - new Date(b)
+          new Date(b) - new Date(a)
       ),
     },
     revalidate: 10,
