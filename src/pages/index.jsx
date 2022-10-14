@@ -14,7 +14,7 @@ import Favicons from '@/components/player/Favicons'
 
 function PlayPauseIcon({ playing, ...props }) {
   return (
-    <svg ariaHidden="true" viewBox="0 0 10 10" fill="none" {...props}>
+    <svg aria-hidden="true" viewBox="0 0 10 10" fill="none" {...props}>
       {playing ? (
         <path
           fillRule="evenodd"
@@ -246,7 +246,6 @@ export default function Home({ episodes }) {
         onClick={(e) => {
           if (e.target.id !== 'search-bar' && e.target.id !== 'search-button') {
             setShowSearchBar(false)
-            setQuery('')
           }
         }}
       >
