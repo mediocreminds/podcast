@@ -13,7 +13,7 @@ import Favicons from '../components/player/Favicons'
 
 function PlayPauseIcon({ playing, ...props }) {
   return (
-    <svg aria-hidden="true" viewBox="0 0 10 10" fill="none" {...props}>
+    <svg ariaHidden="true" viewBox="0 0 10 10" fill="none" {...props}>
       {playing ? (
         <path
           fillRule="evenodd"
@@ -110,10 +110,10 @@ function EpisodeEntry({ episode: { metadata, slug, hasNotes } }) {
 function EpisodeSearchBar({
   query,
   setQuery,
-  searchClicked,
-  setSearchClicked,
+  showSearchBar,
+  setShowSearchBar,
 }) {
-  return searchClicked ? (
+  return showSearchBar ? (
     <input
       id="search-bar"
       className="focus:shadow-outline-blue ml-auto block w-auto appearance-none rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-medium leading-5 text-slate-900 placeholder-slate-500 shadow-sm transition duration-150 ease-in-out focus:border-blue-300 focus:placeholder-slate-400 focus:outline-none sm:text-sm sm:leading-5"
@@ -129,7 +129,7 @@ function EpisodeSearchBar({
       type="button"
       onClick={(e) => {
         e.stopPropagation()
-        setSearchClicked(true)
+        setShowSearchBar(true)
       }}
       className="focus:shadow-outline-blue ml-auto block w-auto appearance-none rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-medium leading-5 text-slate-900 placeholder-slate-500 shadow-sm transition duration-150 ease-in-out focus:border-blue-300 focus:placeholder-slate-400 focus:outline-none sm:text-sm sm:leading-5"
     >
@@ -142,20 +142,77 @@ function EpisodeSearchBar({
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
           d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
         ></path>
       </svg>
-      <span class="sr-only">Search</span>
     </button>
+  )
+}
+
+function filterEpisodes(episodes, query) {
+  if (!query || query.length < 3) {
+    return episodes
+  }
+  const result = []
+  const tokens = query.trim().split(/\s/)
+
+  for (const episode of episodes) {
+    if (
+      tokens.some(
+        (token) =>
+          new RegExp(token, 'i').test(episode.metadata.title) ||
+          new RegExp(token, 'i').test(episode.metadata.subtitle) ||
+          new RegExp(token, 'i').test(episode.metadata.content) ||
+          new RegExp(token, 'i').test(episode.metadata.description)
+      )
+    ) {
+      result.push(episode)
+      continue
+    }
+
+    if (
+      tokens.some(
+        (token) =>
+          episode.metadata.keywords &&
+          episode.metadata.keywords
+            .split(/,\s?/)
+            .some((keyword) => new RegExp(token, 'i').test(keyword))
+      )
+    ) {
+      result.push(episode)
+      continue
+    }
+
+    if (
+      tokens.some(
+        (token) =>
+          episode.metadata.author &&
+          episode.metadata.author
+            .split(/,\s?/)
+            .some((author) => new RegExp(token, 'i').test(author))
+      )
+    ) {
+      result.push(episode)
+      continue
+    }
+  }
+
+  return result.sort(
+    ({ metadata: { pubDate: a } }, { metadata: { pubDate: b } }) =>
+      new Date(b) - new Date(a)
   )
 }
 
 export default function Home({ episodes }) {
   const [query, setQuery] = useState('')
-  const [searchClicked, setSearchClicked] = useState(false)
+  const [showSearchBar, setShowSearchBar] = useState(false)
+  const filteredEpisodes = useMemo(
+    () => filterEpisodes(episodes, query),
+    [episodes, query]
+  )
 
   return (
     <>
@@ -168,7 +225,7 @@ export default function Home({ episodes }) {
         className="pt-16 pb-12 sm:pb-4 lg:pt-12"
         onClick={(e) => {
           if (e.target.id !== 'search-bar' && e.target.id !== 'search-button') {
-            setSearchClicked(false)
+            setShowSearchBar(false)
             setQuery('')
           }
         }}
@@ -181,13 +238,13 @@ export default function Home({ episodes }) {
             <EpisodeSearchBar
               query={query}
               setQuery={setQuery}
-              searchClicked={searchClicked}
-              setSearchClicked={setSearchClicked}
+              showSearchBar={showSearchBar}
+              setShowSearchBar={setShowSearchBar}
             />
           </div>
         </Container>
         <div className="divide-y divide-slate-100 sm:mt-4 lg:mt-8 lg:border-t lg:border-slate-100">
-          {episodes.map((episode) => (
+          {filteredEpisodes.map((episode) => (
             <EpisodeEntry key={episode.slug} episode={episode} />
           ))}
         </div>
@@ -197,7 +254,6 @@ export default function Home({ episodes }) {
 }
 
 export async function getStaticProps() {
-  // TODO This is a quick fix. Change this to read local files and get data from it
   const episodeSlugs = fs.readdirSync(`${process.cwd()}/episodes`)
   const episodes = []
   for (const slug of episodeSlugs) {
@@ -217,7 +273,7 @@ export async function getStaticProps() {
     props: {
       episodes: episodes.sort(
         ({ metadata: { pubDate: a } }, { metadata: { pubDate: b } }) =>
-          new Date(a) - new Date(b)
+          new Date(b) - new Date(a)
       ),
     },
     revalidate: 10,
