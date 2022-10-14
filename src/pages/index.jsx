@@ -1,4 +1,5 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
 import Head from 'next/head'
 import Link from 'next/link'
 import fs from 'fs'
@@ -9,7 +10,7 @@ import { Container } from '@/components/Container'
 import { FormattedDate } from '@/components/FormattedDate'
 
 import siteConfig from '@/site-config'
-import Favicons from '../components/player/Favicons'
+import Favicons from '@/components/player/Favicons'
 
 function PlayPauseIcon({ playing, ...props }) {
   return (
@@ -120,7 +121,12 @@ function EpisodeSearchBar({
       placeholder="Search for Episodes"
       type="text"
       value={query}
-      onChange={(e) => setQuery(e.target.value)}
+      onChange={(e) => {
+        setQuery(e.target.value)
+        if (e.target.value.length < 3) {
+          history.pushState(null, null, '/')
+        }
+      }}
       ref={(input) => input && input.focus()}
     />
   ) : (
@@ -135,7 +141,7 @@ function EpisodeSearchBar({
     >
       <svg
         aria-hidden="true"
-        class="h-5 w-5"
+        className="h-5 w-5"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -200,6 +206,8 @@ function filterEpisodes(episodes, query) {
     }
   }
 
+  history.replaceState(null, null, `?q=${encodeURIComponent(query)}`)
+
   return result.sort(
     ({ metadata: { pubDate: a } }, { metadata: { pubDate: b } }) =>
       new Date(b) - new Date(a)
@@ -209,6 +217,18 @@ function filterEpisodes(episodes, query) {
 export default function Home({ episodes }) {
   const [query, setQuery] = useState('')
   const [showSearchBar, setShowSearchBar] = useState(false)
+
+  const {
+    query: { q = '' },
+  } = useRouter()
+
+  useEffect(() => {
+    if (q) {
+      setQuery(q)
+      setShowSearchBar(true)
+    }
+  }, [q])
+
   const filteredEpisodes = useMemo(
     () => filterEpisodes(episodes, query),
     [episodes, query]
