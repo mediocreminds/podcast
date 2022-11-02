@@ -1,0 +1,17 @@
+---
+title: "No Agenda #1"
+subtitle: ""
+author: "Hari, Krushi and Vishal"
+content: "A no agenda episode where we talk about various things which are based on current affairs and contemporary stuff."
+description: "A no agenda episode where we talk about various things which are based on current affairs and contemporary stuff."
+audioUrl: "episode.mp3"
+audioType: "audio/mp3"
+duration: "4499"
+pubDate: "Tue, 01 Nov 2022 03:00:00 GMT"
+season: "1"
+episode: "4"
+order: "1"
+keywords: "tech,podcast,software,life,elonmusk,elon,musk,twitter,ethics,fraud,creditcard,credit,card,chargeback,movies,india,movie,indian,telugu,ginna,blackadam,shazam,superman,dc"
+episodeType: "full"
+restriction: ""
+---
