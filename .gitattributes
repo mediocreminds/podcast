@@ -7,3 +7,4 @@ episodes/software-life/social.png filter=lfs diff=lfs merge=lfs -text
 episodes/code-reviews/social.png filter=lfs diff=lfs merge=lfs -text
 episodes/code-reviews/cover.png filter=lfs diff=lfs merge=lfs -text
 episodes/code-reviews/episode.mp3 filter=lfs diff=lfs merge=lfs -text
+episodes/no-agenda-1/episode.mp3 filter=lfs diff=lfs merge=lfs -text
