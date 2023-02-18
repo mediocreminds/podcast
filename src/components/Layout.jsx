@@ -319,7 +319,7 @@ function AboutSection(props) {
 }
 
 export function Layout({ children }) {
-  let hosts = ['Durga Prasad', 'Hari Narayana', 'Krushi Raj', 'Vishal Reddy']
+  const hosts = ['Hari Narayana', 'Krushi Raj', 'Vishal Reddy']
 
   return (
     <>
