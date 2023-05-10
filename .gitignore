@@ -4,3 +4,5 @@ out
 public/rss/
 
 .DS_Store
+
+.idea/

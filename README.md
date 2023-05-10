@@ -27,13 +27,13 @@ This project uses [NextJS](https://nextjs.org/) and [TailwindCSS](https://tailwi
 # Deployment Steps
 
 - First make sure your changes are good to go on `main` branch
-- Then merge changes from `main` to `podcast` (we always use `podcast` branch as prodoction branch, and every change must go from adhoc branch -> main -> podcast)
+- Then merge changes from `main` to `podcast` (we always use `podcast` branch as production branch, and every change must go from adhoc branch -> main -> podcast)
 - Github Pages action will automatically deploy the new changes
 
 # Future Milestones
 
-- [x] Convert Static to Dynamic (React, Nextjs, etc)
+- [x] Convert Static to Dynamic (React, NextJs, etc)
 - Make sure audio files are pushed as git lfs
-- Make this as generic as possible with a single or a couple of json configuration files
-- Make this open source + self hosted podcast manager
-- Charge others who want to host from our end
+- Make this as generic as possible with a single or a couple of JSON configuration files
+- Make this open source + self-hosted podcast manager
+- Monetize by charging people to be able to host podcasts
