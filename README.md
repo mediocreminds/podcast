@@ -28,7 +28,7 @@ This project uses [NextJS](https://nextjs.org/) and [TailwindCSS](https://tailwi
 
 - First make sure your changes are good to go on `main` branch
 - Then merge changes from `main` to `podcast` (we always use `podcast` branch as production branch, and every change must go from adhoc branch -> main -> podcast)
-- Github Pages action will automatically deploy the new changes
+- GitHub Pages action will automatically deploy the new changes
 
 # Future Milestones
 
