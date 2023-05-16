@@ -1,5 +1,5 @@
 ---
-title: 'Psychology of Mistakes Episode 01'
+title: 'Psychology of Mistakes Ep. 1'
 subtitle: 'A take on human psychology and our learnings through life by our very own - Vishal, Krushi and Hari'
 author: 'Hari, Krushi, and Vishal'
 content: 'Hari, Krushi and Vishal talk about human psychology, right vs wrong, judgement, social bias and life lessons'
